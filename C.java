@@ -1,13 +1,23 @@
 class C{
-C(){
-this(5);
-System.out.println("hello a ");}
-C(int x){
-System.out.println(x);
+public void disp(){
+System.out.println("Method of class C");
+}
+class A extends C{
+public void disp(){
+System.out.println("Method of class A");
 }
 }
-class TestThis6{
+class B extends C{
+public void disp(){
+System.out.println("Method of class B");
+}
+}
+class D extends A{
+public void disp(){
+System.out.println("Method of class D");
+}
 public static void main(String args[]){
-C c = new C();
+D obj = new D();
+obj.disp();
 }
 }

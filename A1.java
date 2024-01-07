@@ -1,10 +1,20 @@
 class A1{
-void m(){System.out.println("Hello m");}
-void n(){System.out.println("Hello n");
-this.m();
-}}
-class TestThis4{
+void eat(){System.out.println("starving.....");}
+}
+class Animal extends A1{
+void eat(){System.out.println("eating....");}
+}
+class Dog extends Animal{
+void eat(){System.out.println("eating bread...");}
+void bark(){System.out.println("barking...");}
+void work(){
+super.eat();
+bark();
+}
+}
+class Test2{
 public static void main(String args[]){
-A1 a = new A1();
-a.n();
-}}
+Dog d = new Dog();
+d.work();
+}
+}
